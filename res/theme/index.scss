@@ -1,0 +1,30 @@
+@import "vendor/wpforms-full.scss";
+@import "hoarder/styles.css";
+@import "davestewart/styles.scss";
+
+.entry-meta-footer a.tag:not(:last-child):after {
+  content: ", ";
+  color: unset;
+}
+
+.post-hierarchy {
+  .group.level-1 {
+  > ul {
+    display: none;
+  }
+}
+
+  .group.level-2 {
+    margin-left: 20px;
+  }
+}
+
+.widget span.text {
+  display: inline-block;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.2em;
+  vertical-align: sub;
+}

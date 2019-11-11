@@ -1,0 +1,28 @@
+{
+  "name": "gridsome-starter-wordpress",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "watch": "nodemon /usr/local/bin/gridsome develop --watch ./gridsome.config.js --watch ./gridsome.server.js --watch ./src/plugins/**/*",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "@gridsome/source-wordpress": "^0.5.1",
+    "axios": "^0.19.0",
+    "camelcase": "^5.3.1",
+    "debounce": "^1.2.0",
+    "gridsome": "^0.6.7",
+    "isotope-layout": "^3.0.6",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "vue": "^2.6.10",
+    "vue-sticky": "^3.3.4"
+  },
+  "devDependencies": {
+    "p-map": "^3.0.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "style-resources-loader": "^1.2.1"
+  }
+}
