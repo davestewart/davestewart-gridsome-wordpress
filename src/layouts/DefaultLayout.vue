@@ -9,7 +9,7 @@
       <div id="primary" class="hfeed">
         <slot/>
       </div>
-      <div v-if="sidebar" id="sidebar" class="aside">
+      <div v-if="sidebar" id="sidebar" class="aside" v-sticky="{ stickyTop: 40 }">
         <div class="sticky-content">
           <slot name="sidebar" />
         </div>
@@ -21,11 +21,16 @@
 </template>
 
 <script>
+import sticky from 'vue-sticky'
 import SiteHeader from '~/components/site/SiteHeader.vue'
 import SiteFooter from '~/components/site/SiteFooter.vue'
 import SiteNav from '~/components/site/SiteNav.vue'
 
 export default {
+  directives: {
+    sticky,
+  },
+
   components: {
     SiteHeader,
     SiteFooter,
