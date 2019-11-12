@@ -11,9 +11,9 @@ function addStyleResource (rule) {
 }
 
 module.exports = {
-  siteName: 'Gridsome',
-  siteDescription: 'A WordPress starter for Gridsome',
-  // icon: './static/favicon.png',
+  siteName: 'Dave Stewart',
+  siteDescription: 'Creative Web Development | Side Projects + Exploration',
+  icon: './static/favicon.png',
   plugins: [
     {
       // use: '@gridsome/source-wordpress',

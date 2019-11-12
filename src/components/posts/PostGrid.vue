@@ -55,7 +55,7 @@ export default {
         console.log('grid item loaded')
         this.iso && this.iso.layout()
       }
-    }, 50)
+    }, 25)
   }
 }
 </script>

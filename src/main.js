@@ -18,6 +18,6 @@ export default function (Vue, { head }) {
   Object.keys(filters).forEach(key => Vue.filter(key, filters[key]))
 
   // styles
-  // https://fonts.google.com/specimen/Merriweather?selection.family=Merriweather|Open+Sans:400,700|Patua+One
-  head.style.push(stylesheet('https://fonts.googleapis.com/css?family=Merriweather|Open+Sans:400,700|Patua+One&display=swap'))
+  // https://fonts.google.com/specimen/Merriweather?selection.family=Merriweather:300,400|Open+Sans:400,700|Patua+One
+  head.style.push(stylesheet('https://fonts.googleapis.com/css?family=Merriweather:300,400|Open+Sans:400,700|Patua+One&display=swap'))
 }
