@@ -1,11 +1,11 @@
-import moment from 'moment'
+import { format } from 'date-fns/fp'
 
 export default {
   date (value) {
-    return moment(value).locale('en_gb').format('ll')
+    return format('d LLLL yyyy', new Date(value))
   },
 
   year (value) {
-    return moment(value).locale('en_gb').format('Y')
+    return format('yyyy', new Date(value))
   }
 }

@@ -11,11 +11,11 @@
     "@gridsome/source-wordpress": "^0.5.1",
     "axios": "^0.19.0",
     "camelcase": "^5.3.1",
+    "date-fns": "^2.7.0",
     "debounce": "^1.2.0",
     "gridsome": "^0.6.7",
     "isotope-layout": "^3.0.6",
     "lodash": "^4.17.15",
-    "moment": "^2.24.0",
     "vue": "^2.6.10",
     "vue-sticky": "^3.3.4"
   },
