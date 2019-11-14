@@ -1,0 +1,143 @@
+iframe {
+  max-width: 100%;
+  margin-bottom: 1.25em;
+}
+
+.blog iframe,
+.page-template-template-home-2col-php iframe {
+  height: auto;
+}
+
+.page-template-template-home-2col-php .fluid-width-video-wrapper iframe {
+  height: 100%;
+}
+
+.post-thumb {
+  background: #ea4848 url(/assets/theme/plus.png) 50% 50% no-repeat;
+  margin: 1.429em 20px;
+}
+
+.single .post-thumb {
+  background: none;
+}
+
+.post-thumb a img {
+  transition: opacity .1s linear;
+}
+
+.post-thumb a:hover img {
+  opacity: .15;
+}
+
+.post-thumb img {
+  vertical-align: bottom;
+}
+
+.post-thumb iframe {
+  margin-bottom: 0;
+  vertical-align: bottom;
+  width: 100%;
+}
+
+.single .format-gallery .post-thumb {
+  background: none;
+  padding-bottom: 2.8125em;
+}
+
+.format-audio .post-thumb,
+.format-video .post-thumb {
+  background: none;
+}
+
+.entry-content {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+  width: auto;
+  max-width: 100%;
+}
+
+img.alignleft {
+  float: left;
+  margin: 10px 25px 10px 0;
+}
+
+img.alignright {
+  display: block;
+  margin: 10px 0 10px 25px;
+}
+
+img.aligncenter {
+  display: block;
+  clear: both;
+  margin: 10px auto;
+}
+
+img.alignnone {
+  display: block;
+  margin: 10px 0;
+}
+
+.wp-caption {
+  text-align: center;
+  margin: 10px 20px 20px 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+}
+
+.wp-caption.aligncenter {
+  margin: 20px auto;
+}
+
+.wp-caption.alignleft {
+  margin-left: 0;
+}
+
+.wp-caption.alignright {
+  margin-right: 0;
+}
+
+.wp-caption.alignnone {
+  margin-left: 0;
+}
+
+.wp-caption img,
+.wp-caption img a {
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+}
+
+.wp-caption
+.wp-caption-text {
+  margin: 0;
+  padding: 5px;
+}
+
+.wp-smiley {
+  max-height: 13px;
+  margin: 0 !important;
+}
+
+.gallery-item {
+  margin: auto;
+}
+
+.gallery-caption,
+.image-caption {
+  color: #A7A7A7;
+  display: block;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 12px;
+  font-style: italic;
+  margin-top: 1em;
+  text-align: center;
+  line-height: 1.4em;
+}
+
+.blog .image-caption,
+.page-template-template-home-2col.php .image-caption {
+  display: none;
+}

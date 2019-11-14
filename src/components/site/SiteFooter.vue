@@ -1,10 +1,10 @@
 <template>
   <div id="footer">
 
-    <div class="footer-inner">
+    <div class="footer-inner layout__inner">
 
       <div class="footer-col-1">
-        <div id="ds_links-4" class="widget ds_links">
+        <div class="widget">
           <h3 class="widget-title">Open Source Portfolio</h3>
           <ul>
             <li><a href="http://davestewart.io" title="davestewart.io">davestewart.io</a></li>
@@ -13,7 +13,7 @@
       </div>
 
       <div class="footer-col-2">
-        <div id="ds_links-5" class="widget ds_links">
+        <div class="widget">
           <h3 class="widget-title">Browse Jobs</h3>
           <ul>
             <li><a href="/posts-by-category/">By Category</a></li>
@@ -24,7 +24,7 @@
       </div>
 
       <div class="footer-col-3">
-        <div id="ds_links-6" class="widget ds_links">
+        <div class="widget">
           <h3 class="widget-title">More Info</h3>
           <ul>
             <li><a href="/contact/">Contact</a></li>
@@ -36,7 +36,7 @@
     </div>
 
     <div class="footer-lower">
-      <div class="footer-inner">
+      <div class="footer-inner layout__inner">
         <p class="copyright">
           © Copyright 2019. Powered by
           <a href="http://gridsome.org/">Gridsome</a> and

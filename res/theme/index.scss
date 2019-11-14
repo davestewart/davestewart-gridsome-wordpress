@@ -1,6 +1,5 @@
-@import "vendor/wpforms-full.scss";
-@import "hoarder/styles.css";
-@import "davestewart/styles.scss";
+@import "hoarder/index.scss";
+@import "davestewart/index.scss";
 
 .entry-meta-footer a.tag:not(:last-child):after {
   content: ", ";

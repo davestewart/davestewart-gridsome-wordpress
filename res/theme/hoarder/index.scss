@@ -1,0 +1,34 @@
+/*-----------------------------------------------------------------------------------
+
+	Theme Name: Hoarder
+	Theme URI: http://www.themezilla.com/themes/hoarder
+	Description: A theme for collecting internet things.
+	Author: ThemeZilla
+	Author URI: http://www.themezilla.com
+	Version: 1.1.1
+
+-----------------------------------------------------------------------------------*/
+
+@import "formatting/reset";
+@import "formatting/setup";
+@import "formatting/general";
+@import "formatting/forms";
+@import "formatting/content";
+
+@import "layout/layout";
+@import "layout/screens";
+
+@import "sections/header";
+@import "sections/navigation";
+@import "sections/search";
+@import "sections/footer";
+@import "sections/page";
+
+@import "media/images";
+@import "media/slider";
+@import "media/player";
+@import "media/isotope";
+
+@import "elements/widgets";
+@import "elements/comments";
+@import "elements/pagination";

@@ -1,0 +1,95 @@
+
+/* Flexslider Necessary Styles -----------------------------------------*/
+.flexslider {
+  margin: 0;
+  padding: 0;
+}
+
+.flexslider .slides > li {
+  display: none; /* Hide the slides before the JS is loaded. Avoids image jumping */
+  -webkit-backface-visibility: hidden;
+}
+
+.flexslider .slides img {
+  width: 100%;
+  display: block;
+}
+
+.flexslider .slides img:hover {
+  cursor: pointer;
+}
+
+.blog .flexslider .slides li,
+.page-template-template-home-2col-php .flexslider .slides li {
+  height: 195px !important;
+}
+
+.page-template-template-home-blog-php .flexslider .slides li {
+  height: 435px !important;
+}
+
+.flex-pauseplay span {
+  text-transform: capitalize;
+}
+
+/* Clearfix for the .slides element */
+.slides:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+html[xmlns] .slides {
+  display: block
+}
+
+* html .slides {
+  height: 1%;
+}
+
+/* No JavaScript Fallback */
+.no-js .slides > li:first-child {
+  display: block;
+}
+
+.slides {
+  margin: 0 0 0.9375em 0;
+}
+
+.zilla-direction-nav {
+  border-bottom: 1px solid #ebebec;
+  display: block;
+  font-size: 12px;
+  margin: 0;
+  padding-bottom: 0.6em;
+  position: absolute;
+  width: 260px;
+}
+
+.single .zilla-direction-nav,
+.archive .zilla-direction-nav,
+.search .zilla-direction-nav,
+.page-template-template-home-blog-php .zilla-direction-nav {
+  width: 580px;
+}
+
+.zilla-direction-nav a {
+  color: #A7A7A7;
+}
+
+.zilla-direction-nav a:hover {
+  text-decoration: none;
+  color: #ea4848;
+}
+
+.zilla-direction-nav .zilla-prev {
+  float: left;
+}
+
+.zilla-direction-nav .zilla-next {
+  float: right;
+}
+
