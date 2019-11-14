@@ -1,13 +1,36 @@
-@import "hoarder/index.scss";
-// @import "davestewart/index.scss";
+/*-----------------------------------------------------------------------------------
 
+	Theme Name: Hoarder
+	Theme URI: http://www.themezilla.com/themes/hoarder
+	Description: A theme for collecting internet things.
+	Author: ThemeZilla
+	Author URI: http://www.themezilla.com
+	Version: 1.1.1
 
-.widget span.text {
-  display: inline-block;
-  max-width: 200px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  line-height: 1.2em;
-  vertical-align: sub;
-}
+-----------------------------------------------------------------------------------*/
+
+@import "formatting/reset";
+@import "formatting/setup";
+@import "formatting/general";
+@import "formatting/forms";
+@import "formatting/entry";
+
+@import "layout/layout";
+
+@import "sections/header";
+@import "sections/navigation";
+@import "sections/search";
+@import "sections/footer";
+@import "sections/sidebar";
+
+@import "media/images";
+@import "media/slider";
+@import "media/player";
+@import "elements/grid";
+
+@import "elements/widgets";
+@import "elements/comments";
+@import "elements/pagination";
+@import "elements/post-hierarchy";
+
+@import "responsive";
