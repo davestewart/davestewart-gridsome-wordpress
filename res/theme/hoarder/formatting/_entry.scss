@@ -1,0 +1,157 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// CARD
+// ---------------------------------------------------------------------------------------------------------------------
+
+.card {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  display: block;
+  padding: 1px 0; // needed for content to have margins
+}
+
+.layout__single .card {
+  margin-bottom: 2.5em;
+  //width: 620px;
+}
+
+.layout__archive .card {
+  //width: 620px;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// ENTRY
+// ---------------------------------------------------------------------------------------------------------------------
+
+.entry-content {
+  margin: 0.5em 20px 1em 20px;
+}
+
+.entry-content ul {
+  list-style-type: disc;
+}
+
+.entry-content ol {
+  list-style-type: decimal;
+}
+
+.entry-title {
+  margin: 0.5em 20px 0.5em;
+}
+
+
+.entry-title a {
+  color: #5A5E61;
+}
+
+.layout__archive .entry-title {
+  font-size: 32px;
+}
+
+.layout__single .entry-title,
+.layout__page .entry-title {
+  font-size: 32px;
+  margin-top: 0.5em;
+}
+
+.entry-meta-footer {
+  background: #fbfbfb;
+  border-top: 1px solid #ebebec;
+  -webkit-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+  clear: left;
+  color: #414244;
+  font-size: 12px;
+  overflow: hidden;
+  padding: 1.3em 1.6em 20px;
+  line-height: 1.7em;
+}
+
+.entry-meta-footer span {
+  display: block;
+  font-weight: bold;
+}
+
+.entry-meta-footer a {
+  color: #414244;
+  font-weight: normal;
+}
+
+.entry-meta-footer a:hover {
+  text-decoration: none;
+  color: #ea4848;
+}
+
+.entry-meta-footer {
+  label {
+    font-weight: 600;
+    color: #333;
+    padding-right: .4em;
+  }
+
+  span {
+    display: inline;
+    font-weight: normal;
+  }
+}
+
+// list of tags
+.entry-meta-footer a.tag:not(:last-child):after {
+  content: ", ";
+  color: #414244;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// QUOTE
+// ---------------------------------------------------------------------------------------------------------------------
+
+.entry-quote,
+.entry-link {
+  background: #ea4848;
+  color: #fff;
+  font-family: 'Patua One', Georgia, serif;
+  margin: 1.429em 20px;
+  padding: 1.429em 20px;
+  position: relative;
+}
+
+.entry-quote::after {
+  bottom: 0;
+  content: '”';
+  font-size: 2em;
+  line-height: 1em;
+  position: absolute;
+  right: 20px;
+}
+
+.entry-quote .quote-source,
+.entry-link .link-url {
+  font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 12px;
+  line-height: 1.4em;
+  margin-bottom: 0;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// AUTHOR
+// ---------------------------------------------------------------------------------------------------------------------
+
+.author-bio {
+  padding: 20px;
+  background: #fbfbfb;
+  border: 1px solid #efefef;
+}
+
+.author-bio .avatar {
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+.author-title {
+  font-weight: bold;
+  margin-left: 60px;
+}
+
+.author-description {
+  margin-left: 60px;
+}

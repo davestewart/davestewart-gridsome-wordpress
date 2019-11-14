@@ -1,22 +1,6 @@
 @import "hoarder/index.scss";
-@import "davestewart/index.scss";
+// @import "davestewart/index.scss";
 
-.entry-meta-footer a.tag:not(:last-child):after {
-  content: ", ";
-  color: unset;
-}
-
-.post-hierarchy {
-  .group.level-1 {
-  > ul {
-    display: none;
-  }
-}
-
-  .group.level-2 {
-    margin-left: 20px;
-  }
-}
 
 .widget span.text {
   display: inline-block;

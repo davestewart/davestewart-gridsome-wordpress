@@ -62,7 +62,7 @@ export default {
     return {
       title: this.$page.post.title,
       bodyAttrs: {
-        class: 'single'
+        class: 'layout__single'
       }
     }
   },

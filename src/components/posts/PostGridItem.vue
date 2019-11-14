@@ -1,5 +1,5 @@
 <template>
-  <div class="post type-post hentry grid-item" :class="postClasses">
+  <div class="post type-post card grid-item" :class="postClasses">
 
     <div class="post-thumb">
       <g-link :to="post.path">

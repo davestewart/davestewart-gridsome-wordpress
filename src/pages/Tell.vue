@@ -33,7 +33,7 @@ export default {
   metaInfo: {
     title: 'Tell',
     bodyAttrs: {
-      class: 'archive',
+      class: 'layout__archive',
     }
   },
 

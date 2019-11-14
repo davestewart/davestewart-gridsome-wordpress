@@ -1,7 +1,8 @@
 <template>
-  <b-button class="read-more border-0 mb-5" variant="primary" :to="post.path">
-    <span><b class="text-uppercase">Read More</b><span v-html="readingTime"/></span>
-  </b-button>
+  <g-link class="read-more" :to="post.path">
+    <span class="text">Read More</span>
+    <span class="meta" v-html="readingTime"/>
+  </g-link>
 </template>
 
 <script>

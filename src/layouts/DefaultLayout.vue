@@ -5,8 +5,8 @@
 
     <SiteNav/>
 
-    <div id="content" class="clearfix">
-      <div id="primary" class="hfeed">
+    <div id="content" class="layout__center">
+      <div id="primary">
         <slot/>
       </div>
       <div v-if="sidebar" id="sidebar" class="aside">
@@ -30,6 +30,16 @@ export default {
     SiteHeader,
     SiteFooter,
     SiteNav,
+  },
+
+  metaInfo (data) {
+    return {
+      bodyAttrs: {
+        class: this.sidebar
+          ? 'has-sidebar'
+          : ''
+      }
+    }
   },
 
   props: {

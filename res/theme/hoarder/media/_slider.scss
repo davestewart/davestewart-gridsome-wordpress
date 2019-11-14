@@ -19,13 +19,8 @@
   cursor: pointer;
 }
 
-.blog .flexslider .slides li,
-.page-template-template-home-2col-php .flexslider .slides li {
+.blog .flexslider .slides li {
   height: 195px !important;
-}
-
-.page-template-template-home-blog-php .flexslider .slides li {
-  height: 435px !important;
 }
 
 .flex-pauseplay span {
@@ -69,10 +64,8 @@ html[xmlns] .slides {
   width: 260px;
 }
 
-.single .zilla-direction-nav,
-.archive .zilla-direction-nav,
-.search .zilla-direction-nav,
-.page-template-template-home-blog-php .zilla-direction-nav {
+.layout__single .zilla-direction-nav,
+.layout__archive .zilla-direction-nav {
   width: 580px;
 }
 

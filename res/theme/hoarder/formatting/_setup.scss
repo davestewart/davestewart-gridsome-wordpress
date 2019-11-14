@@ -1,12 +1,16 @@
+html {
+  overflow-y: scroll;
+}
 
 body {
-  font: 14px/1.571em Helvetica, Arial, "Lucida Grande", sans-serif;
-  background: transparent url(/assets/theme/bg-body.gif) repeat fixed;
+  position: relative;
   border-top: 4px solid #2c2f32;
   color: #414244;
-  min-width: 980px;
-  -webkit-font-smoothing: antialiased;
+  background: transparent url(/assets/theme/bg-body.gif) repeat fixed;
+  font-family: 'Open Sans', Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 0.8em;
   word-wrap: break-word;
+  line-height: 1.4em;
 }
 
 .hidden {
@@ -40,10 +44,6 @@ body {
 a {
   color: #ea4848;
   text-decoration: none;
-  -webkit-transition: color .1s linear;
-  -moz-transition: color .1s linear;
-  -ms-transition: color .1s linear;
-  -o-transition: color .1s linear;
   transition: color .1s linear;
 }
 
@@ -77,9 +77,8 @@ form,
   margin-bottom: 1.429em; /* 20px */
 }
 
-.hentry,
+.card,
 .navigation-links,
-.hfeed,
 .pinglist {
   margin-bottom: 2.857em; /* 40px */
 }
@@ -112,20 +111,23 @@ h1 {
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 24px;
+  color: #666;
   line-height: 1.4em;
   margin: 0 0 1em 0;
 }
 
 h3 {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.429em;
   margin: 0 0 0.5em 0;
 }
 
 h4 {
-  font-size: 14px;
   line-height: 1.2857em;
+  font-size: 16px;
+  margin-bottom: 0.5em;
+  color: #666;
 }
 
 h5 {
@@ -138,6 +140,19 @@ h6 {
   line-height: 1.6em;
 }
 
+h1.page-title:after {
+  content: '...';
+  /*
+  font-size: 0.8em;
+  */
+}
+
+
+h1 + .entry-content,
+h2 + .entry-content {
+  margin-top: -0.4em;
+}
+
 .page-title {
   font-family: 'Patua One', Georgia, serif;
   font-size: 16px;
@@ -147,11 +162,10 @@ h6 {
   text-transform: uppercase;
 }
 
-.entry-title,
-.page.page-template-template-home-2col-php .entry-title {
+.entry-title {
   color: #2a2e31;
   font-family: 'Patua One', Georgia, serif;
-  font-size: 20px;
+  font-size: 32px;
   line-height: 1.4em;
   margin: 1.25em 20px 0.5em;
 }
@@ -165,9 +179,8 @@ h6 {
   color: #ea4848;
 }
 
-.single .entry-title,
-.page .entry-title,
-.page-template-template-home-blog-php .entry-title {
+.layout__single .entry-title,
+.layout__page .entry-title {
   font-size: 24px;
   margin-top: 0.8em;
 }

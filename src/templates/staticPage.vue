@@ -1,6 +1,6 @@
 <template>
   <Layout :sidebar="false">
-    <div class="page type-page hentry">
+    <div class="page type-page card">
       <h1 class="entry-title">{{$page.page.title}}</h1>
       <div class="entry-content" v-html="content"/>
     </div>
@@ -22,7 +22,7 @@ export default {
     return {
       title: this.$page.page.title,
       bodyAttrs: {
-        class: 'page-template page-template-template-full-width page-template-template-full-width-php page'
+        class: 'layout__page'
       }
     }
   },

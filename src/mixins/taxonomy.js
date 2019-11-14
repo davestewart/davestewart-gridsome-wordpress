@@ -9,7 +9,7 @@ export default {
     return {
       title: this.$page.taxonomny.title,
       bodyAttrs: {
-        class: 'archive'
+        class: 'layout__archive'
       },
     }
   },

@@ -1,7 +1,7 @@
 <template>
   <div id="footer">
 
-    <div class="footer-inner layout__inner">
+    <div class="footer-inner layout__center">
 
       <div class="footer-col-1">
         <div class="widget">
@@ -36,7 +36,7 @@
     </div>
 
     <div class="footer-lower">
-      <div class="footer-inner layout__inner">
+      <div class="footer-inner layout__center">
         <p class="copyright">
           © Copyright 2019. Powered by
           <a href="http://gridsome.org/">Gridsome</a> and

@@ -1,0 +1,30 @@
+.grid-container {
+  margin: 0 -10px;
+}
+
+.grid-item {
+  margin: 0 10px 1.429em;
+  float: left;
+  width: 300px;
+}
+
+.card.grid-item {
+
+  .entry-title {
+    margin-top: 0.9em;
+    font-size: 20px;
+  }
+
+  .entry-meta-footer {
+    padding: 0.6em 12px;
+    font-size: 10px;
+    text-align: right;
+    font-weight: normal;
+    color: #AAA;
+
+    label {
+      font-weight: normal;
+    }
+  }
+
+}

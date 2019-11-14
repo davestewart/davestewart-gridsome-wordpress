@@ -74,8 +74,6 @@ form.form {
     box-sizing: border-box;
     border-radius: 2px;
     color: #333;
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
     display: block;
     float: none;
     font-size: 16px;
@@ -94,3 +92,6 @@ form.form {
 
 }
 
+label.error {
+  color: red;
+}

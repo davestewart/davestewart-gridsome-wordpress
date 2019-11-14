@@ -13,22 +13,24 @@
 @import "formatting/setup";
 @import "formatting/general";
 @import "formatting/forms";
-@import "formatting/content";
+@import "formatting/entry";
 
 @import "layout/layout";
-@import "layout/screens";
 
 @import "sections/header";
 @import "sections/navigation";
 @import "sections/search";
 @import "sections/footer";
-@import "sections/page";
+@import "sections/sidebar";
 
 @import "media/images";
 @import "media/slider";
 @import "media/player";
-@import "media/isotope";
+@import "elements/grid";
 
 @import "elements/widgets";
 @import "elements/comments";
 @import "elements/pagination";
+@import "elements/post-hierarchy";
+
+@import "responsive";

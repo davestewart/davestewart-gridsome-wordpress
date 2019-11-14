@@ -1,6 +1,6 @@
 <template>
   <Layout :sidebar="false">
-    <div class="post type-post hentry ">
+    <div class="post type-post card ">
       <h2 class="entry-title">Ooops - I couldn't find that content!</h2>
       <div class="entry-content">
         <p>Here's a picture of a DJing cat instead.</p>
@@ -16,7 +16,7 @@ export default {
   metaInfo: {
     title: '404!',
     bodyAttrs: {
-      class: 'archive page-404'
+      class: 'layout__archive page-404'
     }
   }
 }

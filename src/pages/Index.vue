@@ -1,5 +1,5 @@
 <template>
-  <Layout class="home" :sidebar="false">
+  <Layout class="page-home" :sidebar="false">
     <PostGrid :posts="posts">
       <PostGridIntro :post="$page.intro"></PostGridIntro>
     </PostGrid>

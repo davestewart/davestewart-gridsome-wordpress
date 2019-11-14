@@ -1,5 +1,5 @@
 <template>
-  <div class="post type-post hentry" :class="postClasses">
+  <div class="post type-post card" :class="postClasses">
 
     <div class="post-thumb">
       <SmartImage :image="image"/>

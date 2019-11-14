@@ -1,9 +1,9 @@
 <template>
-  <nav class="sticky-nav">
-    <div class="main-navigation">
+  <nav>
 
-      <div id="primary-nav">
-        <ul id="primary-menu" class="menu sf-js-enabled">
+    <div id="main-nav" class="main-navigation">
+      <div class="layout__center">
+        <ul id="main-menu" class="menu">
           <li v-for="(label, path) in items" class="menu-item"><g-link :to="path">{{ label }}</g-link></li>
         </ul>
 
@@ -12,13 +12,19 @@
             <input type="text" name="s" id="s" placeholder="Search...">
           </fieldset>
         </form>
-
-        <ul id="zilla-mobile-menu" class="menu" style="display: none;">
-          <li v-for="(label, path) in items" class="menu-item"><g-link :to="path">{{ label }}</g-link></li>
-        </ul>
-
       </div>
     </div>
+
+    <div id="mobile-nav">
+      <a id="mobile-menu-dropdown" class="menu" href="#mobile-menu-dropdown" @click.prevent="isMenuVisible = !isMenuVisible"></a>
+
+      <ul id="mobile-menu" class="menu" v-show="isMenuVisible">
+        <li v-for="(label, path) in items" class="menu-item">
+          <g-link :to="path" @click="isMenuVisible = false">{{ label }}</g-link>
+        </li>
+      </ul>
+    </div>
+
   </nav>
 </template>
 
@@ -26,6 +32,7 @@
 export default {
   data () {
     return {
+      isMenuVisible: false,
       items: {
         '/': 'Show',
         '/tell': 'Tell',
@@ -39,7 +46,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-</style>

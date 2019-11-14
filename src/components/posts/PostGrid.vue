@@ -1,5 +1,5 @@
 <template>
-  <div class="isotope-container" ref="grid">
+  <div class="grid-container" ref="grid">
     <slot></slot>
     <PostGridItem v-for="({ node }, index) in posts"
                   :key="node.id"

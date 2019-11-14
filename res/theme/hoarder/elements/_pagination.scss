@@ -1,10 +1,8 @@
-
 .navigation {
   overflow: hidden;
   margin-left: 10px;
 }
 
-.page-template-template-home-2col-php .navigation,
 .blog .page-navigation {
   bottom: 0;
   left: 40.5%;
@@ -35,10 +33,7 @@
   text-align: center;
 }
 
-.page-template-template-home-blog-php #load-more,
-.page-template-template-home-2col-php #load-more,
-.archive #load-more,
-.search #load-more {
+.layout__archive #load-more {
   bottom: 3px;
   margin-left: 10px;
   position: absolute;
@@ -50,7 +45,7 @@
   left: 0;
   margin-left: 10px;
   position: absolute;
-  width: 940px;
+  // width: 940px;
 }
 
 #load-more:hover {

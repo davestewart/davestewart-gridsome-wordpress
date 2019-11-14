@@ -1,10 +1,11 @@
 <template>
 
   <header id="header">
-    <div class="header-inner">
+    <div class="layout__center">
       <div id="logo">
-        <a href="http://davestewart.co.uk">Dave Stewart</a> <span> | </span> <a href="http://davestewart.io" title="Go to davestewart.io">co.uk</a>
-        <p id="tagline">Creative Web Development | Side Projects + Exploration</p>
+        <a href="/">Dave Stewart</a>
+        <a href="http://davestewart.io" title="Go to davestewart.io">co.uk</a>
+        <p class="tagline">Creative Web Development | Side Projects + Exploration</p>
       </div>
     </div>
   </header>

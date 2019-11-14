@@ -7,22 +7,16 @@
 .jp-video-container,
 .jp-audio-container {
   border: 1px solid #000;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
   position: relative;
   width: 99.230769%;
 }
 
-.single .jp-video-container,
-.single .jp-audio-container,
-.archive .jp-video-container,
-.archive .jp-audio-container {
+.layout__single .jp-video-container,
+.layout__single .jp-audio-container,
+.layout__archive .jp-video-container,
+.layout__archive .jp-audio-container {
   width: 99.5%;
-}
-
-.page-template-template-home-blog-php .jp-video-container,
-.page-template-template-home-blog-php .jp-audio-container {
-  width: 99.66%;
 }
 
 .jp-interface {
@@ -96,8 +90,6 @@ a.jp-pause:hover {
 }
 
 .jp-progress {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 10px 0;
   padding: 0 81px 0 37px;
@@ -111,8 +103,6 @@ a.jp-pause:hover {
   width: 0px;
   height: 10px;
   cursor: pointer;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
   border-radius: 1px;
 }
 
@@ -120,8 +110,6 @@ a.jp-pause:hover {
   width: 0px;
   height: 8px;
   background: url(/assets/theme/media-player.png) 1px -119px repeat-x;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
   border-radius: 1px;
 }
 
@@ -149,8 +137,6 @@ a.jp-pause:hover {
   height: 8px;
   margin: 1px;
   background: url(/assets/theme/media-player.png) 0 -120px repeat-x;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
   border-radius: 1px;
 }
 

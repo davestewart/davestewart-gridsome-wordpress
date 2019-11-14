@@ -1,36 +1,36 @@
 #s {
-  background: transparent url(/assets/theme/sprite.png) 15px -55px no-repeat;
+  background: transparent url(/assets/theme/sprite.png) 15px -53px no-repeat;
   border-color: #ebebec;
   height: 1.65em;
   line-height: 1.6em;
   margin-top: 0;
   padding-left: 45px;
   width: 210px;
+
+  &:focus {
+    background-color: #f4f4f7;
+    background-position: 15px -4px;
+    border-color: #f4f4f7;
+    width: 150px;
+  }
 }
 
-#s:focus {
-  background-color: #f4f4f7;
-  background-position: 15px -5px;
-  border-color: #f4f4f7;
-}
-
-#primary-nav #s {
-  background-position: 15px -51px;
+#main-nav #s {
+  height: 2.4em;
+  width: 0;
+  padding-left: 36px;
+  float: right;
   border-color: #f4f4f7;
   border-top-color: transparent;
   border-bottom-color: transparent;
+  background-color: inherit;
   font-size: 1em;
-  float: right;
-  height: 2.5em;
   line-height: 1.6em;
-  -webkit-transition: width .2s linear;
-  -moz-transition: width .2s linear;
-  -ms-transition: width .2s linear;
-  -o-transition: width .2s linear;
+  text-indent: 5px;
   transition: width .2s linear;
-  width: 10px;
+
+  &:focus {
+    width: 120px;
+  }
 }
 
-#primary-nav #s:focus {
-  width: 100px;
-}
