@@ -7,7 +7,7 @@ export default {
 
   metaInfo () {
     return {
-      title: this.$page.taxonomny.title,
+      title: this.$page.taxonomy.title,
       bodyAttrs: {
         class: 'layout__archive'
       },
@@ -16,19 +16,19 @@ export default {
 
   computed: {
     title () {
-      return this.$page.taxonomny.title
+      return this.$page.taxonomy.title
     },
 
     total () {
-      return this.$page.taxonomny.belongsTo.totalCount
+      return this.$page.taxonomy.belongsTo.totalCount
     },
 
     pageInfo () {
-      return this.$page.taxonomny.belongsTo.pageInfo
+      return this.$page.taxonomy.belongsTo.pageInfo
     },
 
     posts () {
-      return this.$page.taxonomny.belongsTo.edges
+      return this.$page.taxonomy.belongsTo.edges
     },
 
     numPosts () {

@@ -15,7 +15,7 @@
 
 <page-query>
 query Category($path: String, $page: Int) {
-  taxonomny: wordPressCategory(path: $path) {
+  taxonomy: wordPressCategory(path: $path) {
     title
     belongsTo(page: $page, perPage: 100) @paginate {
       totalCount
