@@ -1,5 +1,9 @@
+/**
+  Need to get a proper breakpoint lib going
+  @see https://css-tricks.com/approaches-media-queries-sass/
+ */
 
-/* iPads (portrait and landscape) ----------- */
+/// iPads (portrait and landscape)
 @media only screen and (max-width: 1024px) {
 
   .layout__center {
@@ -12,7 +16,7 @@
 
 }
 
-/* iPads (portrait and landscape) ----------- */
+/// iPads (portrait and landscape)
 @media only screen and (max-width: 768px) {
 
   .layout__center {
@@ -24,13 +28,20 @@
     width: 100%;
   }
 
+  #sidebar {
+    width: 100%;
+    .widget {
+      padding-left: 0;
+    }
+  }
+
 }
 
-/* Smartphones (portrait and landscape) ----------- */
+/// Smartphones (portrait and landscape)
 @media only screen and (max-width: 480px) {
 
   .layout__center {
-    width: 350px;
+    width: 100%;
     flex-direction: column;
   }
 

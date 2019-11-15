@@ -18,15 +18,13 @@
   }
 }
 
-.footer-col-1,
-.footer-col-2,
-.footer-col-3 {
+.footer-col {
   float: left;
   margin-right: 20px;
   width: 300px;
 }
 
-.footer-col-3 {
+.footer-col:last-child {
   margin-right: 0;
 }
 
