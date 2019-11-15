@@ -1,5 +1,9 @@
 <template>
   <Layout>
+    <template slot="sidebar">
+      <CatalogWidget/>
+    </template>
+
     <div class="card">
       <h1 class="entry-title">Posts by Category</h1>
       <div class="entry-content">
@@ -41,6 +45,7 @@ query PostByCategory {
 
 <script>
 import PostRoot from '../components/hierarchy/PostRoot'
+import CatalogWidget from '../components/widgets/CatalogWidget'
 import { sortBy } from '../utils/collection'
 
 function getItem (items, key, value) {
@@ -48,6 +53,7 @@ function getItem (items, key, value) {
 }
 export default {
   components: {
+    CatalogWidget,
     PostRoot,
   },
 

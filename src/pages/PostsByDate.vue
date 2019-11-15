@@ -1,5 +1,9 @@
 <template>
   <Layout>
+    <template slot="sidebar">
+      <CatalogWidget/>
+    </template>
+
     <div class="card">
       <h1 class="entry-title">Posts by Date</h1>
       <div class="entry-content">
@@ -30,9 +34,11 @@ query PostsByDate {
 
 <script>
 import PostRoot from '../components/hierarchy/PostRoot'
+import CatalogWidget from '../components/widgets/CatalogWidget'
 
 export default {
   components: {
+    CatalogWidget,
     PostRoot,
   },
 

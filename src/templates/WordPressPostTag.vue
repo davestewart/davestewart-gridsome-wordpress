@@ -1,5 +1,9 @@
 <template>
   <Layout>
+    <template slot="sidebar">
+      <LinkWidget title="All posts" :nodes="links"/>
+      <PaginationWidget :pages="this.$page.taxonomy.belongsTo.pageInfo.totalPages"/>
+    </template>
 
     <h1 class="page-title">Viewing {{ numPosts }} in {{ title }} </h1>
 
@@ -49,9 +53,22 @@ query Category($path: String, $page: Int) {
 </page-query>
 
 <script>
+import LinkWidget, { item } from '../components/widgets/LinkWidget'
+import PaginationWidget from '../components/widgets/PaginationWidget'
 import taxonomy from '~/mixins/taxonomy'
 
 export default {
-  extends: taxonomy
+  extends: taxonomy,
+
+  components: {
+    LinkWidget,
+    PaginationWidget,
+  },
+
+  computed: {
+    links () {
+      return this.posts.map(post => item(post.node.title, post.node.path))
+    },
+  }
 }
 </script>

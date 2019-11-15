@@ -1,5 +1,9 @@
 <template>
   <Layout>
+    <template slot="sidebar">
+      <CatalogWidget/>
+    </template>
+
     <div class="card">
       <h1 class="entry-title">Posts by Tag</h1>
       <div class="entry-content">
@@ -37,11 +41,13 @@ query TagsByCount {
 </page-query>
 
 <script>
+import CatalogWidget from '../components/widgets/CatalogWidget'
 import { plural } from '../utils/text'
 import PostRoot from '../components/hierarchy/PostRoot'
 
 export default {
   components: {
+    CatalogWidget,
     PostRoot,
   },
 
