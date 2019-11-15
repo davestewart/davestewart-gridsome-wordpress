@@ -3,7 +3,6 @@
     <div class="card">
       <h1 class="entry-title">Posts by Date</h1>
       <div class="entry-content">
-        <p>A selection of some of the best commercial and open source work from over the years.</p>
         <PostRoot :children="children"/>
       </div>
     </div>

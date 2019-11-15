@@ -3,7 +3,6 @@
     <div class="card">
       <h1 class="entry-title">Posts by Tag</h1>
       <div class="entry-content">
-        <p>All posts, sorted by tag.</p>
         <PostRoot :children="children"/>
       </div>
     </div>

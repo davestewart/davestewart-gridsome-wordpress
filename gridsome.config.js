@@ -32,10 +32,6 @@ module.exports = {
           list: [
             'show',
             'tell',
-            'posts-by-category',
-            'posts-by-tag',
-            'posts-by-date',
-            'contact',
           ]
         }
       }

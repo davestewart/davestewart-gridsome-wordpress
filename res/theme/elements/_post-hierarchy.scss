@@ -18,13 +18,21 @@
     color: black;
   }
 
+  strong {
+    color: #EA4848;
+  }
+
+  .heading a {
+    color: #555;
+  }
+
   .post {
     margin-bottom: 10px;
   }
 
   .post a {
     padding-bottom: 5px;
-    text-decoration: none !important;
+    text-decoration: none;
   }
 
   .post a:hover .title {
@@ -72,7 +80,7 @@
   }
 
   .comments:after {
-    content: "";
+    content: "...";
     position: absolute;
     display: block;
     width: 0;

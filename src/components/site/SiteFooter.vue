@@ -37,7 +37,6 @@ export default {
 
         widget('Browse Jobs', [
           item('By Category', '/posts-by-category'),
-          item('By Category (new)', '/post-by-category'),
           item('By Date', '/posts-by-date'),
           item('By Tag', '/posts-by-tag'),
         ]),
