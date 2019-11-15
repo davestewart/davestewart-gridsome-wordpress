@@ -2,8 +2,16 @@
   <div id="footer">
 
     <div class="footer-inner layout__center">
-      <div v-for="widget in widgets" class="footer-col">
-        <LinkWidget  v-bind="widget" />
+      <div class="footer-col">
+        <LinkWidget  v-bind="links" />
+      </div>
+
+      <div class="footer-col">
+        <CatalogWidget />
+      </div>
+
+      <div class="footer-col">
+        <LinkWidget  v-bind="more" />
       </div>
     </div>
 
@@ -21,32 +29,25 @@
 </template>
 
 <script>
-import LinkWidget, { widget, item } from '../other/LinkWidget'
+import LinkWidget, { widget, item } from '../widgets/LinkWidget'
+import CatalogWidget from '../widgets/CatalogWidget'
 
 export default {
   components: {
-    LinkWidget
+    LinkWidget,
+    CatalogWidget,
   },
 
   data () {
     return {
-      widgets: [
-        widget('Open Source Portfolio', [
-          item('davestewart.io', 'http://davestewart.io'),
-        ]),
+      links: widget('Open Source Portfolio', [
+        item('davestewart.io', 'http://davestewart.io'),
+      ]),
 
-        widget('Browse Jobs', [
-          item('By Category', '/posts-by-category'),
-          item('By Date', '/posts-by-date'),
-          item('By Tag', '/posts-by-tag'),
-        ]),
-
-        widget('More info', [
-          item('Contact', '/contact'),
-          item('About', '/tell'),
-        ]),
-      ],
-
+      more: widget('More info', [
+        item('Contact', '/contact'),
+        item('About', '/tell'),
+      ]),
     }
   }
 }

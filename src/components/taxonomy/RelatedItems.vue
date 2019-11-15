@@ -44,7 +44,7 @@ query Related {
 </static-query>
 
 <script>
-import LinkWidget from '../other/LinkWidget'
+import LinkWidget from '../widgets/LinkWidget'
 
 import { sortBy } from '~/utils/collection'
 
