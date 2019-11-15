@@ -2,37 +2,9 @@
   <div id="footer">
 
     <div class="footer-inner layout__center">
-
-      <div class="footer-col-1">
-        <div class="widget">
-          <h3 class="widget-title">Open Source Portfolio</h3>
-          <ul>
-            <li><a href="http://davestewart.io" title="davestewart.io">davestewart.io</a></li>
-          </ul>
-        </div>
+      <div v-for="widget in widgets" class="footer-col">
+        <LinkWidget  v-bind="widget" />
       </div>
-
-      <div class="footer-col-2">
-        <div class="widget">
-          <h3 class="widget-title">Browse Jobs</h3>
-          <ul>
-            <li><a href="/posts-by-category/">By Category</a></li>
-            <li><a href="/posts-by-date/">By Date</a></li>
-            <li><a href="/posts-by-tag/">By Tag</a>  </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-col-3">
-        <div class="widget">
-          <h3 class="widget-title">More Info</h3>
-          <ul>
-            <li><a href="/contact/">Contact</a></li>
-            <li><a href="/tell/">About</a></li>
-          </ul>
-        </div>
-      </div>
-
     </div>
 
     <div class="footer-lower">
@@ -47,3 +19,36 @@
 
   </div>
 </template>
+
+<script>
+import LinkWidget, { widget, item } from '../other/LinkWidget'
+
+export default {
+  components: {
+    LinkWidget
+  },
+
+  data () {
+    return {
+      widgets: [
+        widget('Open Source Portfolio', [
+          item('davestewart.io', 'http://davestewart.io'),
+        ]),
+
+        widget('Browse Jobs', [
+          item('By Category', '/posts-by-category'),
+          item('By Category (new)', '/post-by-category'),
+          item('By Date', '/posts-by-date'),
+          item('By Tag', '/posts-by-tag'),
+        ]),
+
+        widget('More info', [
+          item('Contact', '/contact'),
+          item('About', '/tell'),
+        ]),
+      ],
+
+    }
+  }
+}
+</script>

@@ -1,33 +1,10 @@
 <template>
 
   <div>
-
-    <div class="widget widget__related" v-if="categories.length">
-      <h3 class="widget-title">Related categories</h3>
-      <ul>
-        <li v-for="category in categories">
-          <g-link :to="category.path">
-            <span class="text" v-html="category.title"></span>
-            <span class="meta">{{ category.count }}</span></g-link>
-        </li>
-      </ul>
-    </div>
-
-    <div class="widget widget__related" v-if="posts.length">
-      <h3 class="widget-title">
-        <span v-if="type === 'category'">Posts in {{resource.title}}</span>
-        <span v-else>Related posts</span>
-      </h3>
-      <ul>
-        <li v-for="post in posts">
-          <g-link :to="post.path">
-            <span class="text" v-html="post.title"></span>
-            <span class="meta">{{ post.date | year }}</span>
-          </g-link>
-        </li>
-      </ul>
-    </div>
-
+    <LinkWidget title="Related categories" :nodes="categories" />
+    <LinkWidget v-if="posts.length"
+            :title="type === 'category' ? `Posts in ${resource.title}` : 'Related posts'"
+            :nodes="posts" />
   </div>
 
 </template>
@@ -65,7 +42,10 @@ query Related {
   }
 }
 </static-query>
+
 <script>
+import LinkWidget from '../other/LinkWidget'
+
 import { sortBy } from '~/utils/collection'
 
 function clone (value) {
@@ -73,6 +53,10 @@ function clone (value) {
 }
 
 export default {
+  components: {
+    LinkWidget
+  },
+
   props: {
     path: String,
     level: Number
