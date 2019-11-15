@@ -9,10 +9,13 @@
       <div id="primary">
         <slot/>
       </div>
+
       <div v-if="sidebar" id="sidebar" class="aside">
-        <div class="sticky-content">
-          <slot name="sidebar" />
-        </div>
+        <ClientOnly>
+          <SiteSidebar>
+            <slot name="sidebar" />
+          </SiteSidebar>
+        </ClientOnly>
       </div>
     </div>
 
@@ -21,18 +24,19 @@
 </template>
 
 <script>
+import SiteNav from '~/components/site/SiteNav.vue'
 import SiteHeader from '~/components/site/SiteHeader.vue'
 import SiteFooter from '~/components/site/SiteFooter.vue'
-import SiteNav from '~/components/site/SiteNav.vue'
 
 export default {
   components: {
+    SiteNav,
     SiteHeader,
     SiteFooter,
-    SiteNav,
+    SiteSidebar: () => import('~/components/site/SiteSidebar.vue')
   },
 
-  metaInfo (data) {
+  metaInfo () {
     return {
       bodyAttrs: {
         class: this.sidebar
@@ -50,13 +54,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.fade-enter-active {
-  transition: .5s;
-}
-
-.fade-enter {
-  opacity: 0;
-}
-</style>
