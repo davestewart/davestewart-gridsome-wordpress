@@ -9,14 +9,10 @@
 </template>
 
 <script>
+import { node } from './base'
 export default {
   name: 'PostLink',
 
-  props: {
-    title: String,
-    excerpt: String,
-    path: String,
-    year: String,
-  }
+  extends: node
 }
 </script>

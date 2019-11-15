@@ -8,20 +8,25 @@
     <component v-if="children && children.length" :is="children[0].children ? 'div' : 'ul'">
       <component :is="child.children ? 'PostGroup' : 'PostLink'"
                  v-for="child in children"
-                 v-bind="child"
+                 v-bind="getProps(child)"
                  :key="child.path"
-                 :level="level + 1"
       />
     </component>
   </div>
 </template>
 
 <script>
+import { parent, node } from './base'
 import PostGroup from './PostGroup'
 import PostLink from './PostLink'
 
 export default {
   name: 'PostGroup',
+
+  mixins: [
+    parent,
+    node,
+  ],
 
   components: {
     PostGroup,
@@ -29,12 +34,6 @@ export default {
   },
 
   props: {
-    title: String,
-
-    path: String,
-
-    excerpt: String,
-
     children: {
       type: Array,
       default () {
@@ -46,6 +45,6 @@ export default {
       type: Number,
       default: 1
     },
-  }
+  },
 }
 </script>
