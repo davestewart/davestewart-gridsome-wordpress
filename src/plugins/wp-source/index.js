@@ -159,6 +159,8 @@ class WordPressSource {
 
       const data = await this.fetchPaged(`wp/v2/${restBase}`)
 
+      console.log(`fetched ${data.length} posts...`)
+
       for (const post of data) {
         if (type === 'page') {
           this.staticPages.push(post.slug)

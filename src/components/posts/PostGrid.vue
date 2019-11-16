@@ -45,6 +45,7 @@ export default {
           }
         }
       })
+      window.addEventListener('resize', this.layout)
       this.iso.layout()
     }
   },
