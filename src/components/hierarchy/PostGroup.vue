@@ -1,17 +1,29 @@
 <template>
   <div class="group" :class="`level-${level}`">
+
+    <!-- heading -->
     <component :is="`h` + (level + 1)" class="heading">
       <g-link v-if="path" :to="path"><span v-html="title"></span></g-link>
       <span v-else v-html="title"></span>
     </component>
     <p v-if="excerpt" v-html="excerpt" class="description" />
-    <component v-if="children && children.length" :is="children[0].children ? 'div' : 'ul'">
-      <component :is="child.children ? 'PostGroup' : 'PostLink'"
-                 v-for="child in children"
-                 v-bind="getProps(child)"
-                 :key="child.path"
+
+    <!-- groups -->
+    <div v-if="groups">
+      <PostGroup v-for="group in groups"
+                 v-bind="getProps(group)"
+                 :key="group.path"
       />
-    </component>
+    </div>
+
+    <!-- posts -->
+    <ul v-if="posts">
+      <PostLink v-for="post in posts"
+                v-bind="getProps(post)"
+                :key="post.path"
+      />
+    </ul>
+
   </div>
 </template>
 
@@ -46,5 +58,15 @@ export default {
       default: 1
     },
   },
+
+  computed: {
+    groups () {
+      return this.children.filter(child => child.children)
+    },
+
+    posts () {
+      return this.children.filter(child => !child.children)
+    }
+  }
 }
 </script>
