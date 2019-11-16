@@ -88,34 +88,65 @@ export default {
     },
 
     children () {
+      // re-parent nodes to their parents
+      function reParent (child) {
+        // find this child's parent
+        const parent = parents[child.parentId]
+
+        // if adding a group to a parent group, and strict mode is on, remove posts from parent group
+        if (parent && child.children && options.strict) {
+          parent.children = parent.children.filter(child => child.children)
+        }
+
+        // add child to parent if not already
+        if (parent && !parent.children.includes(child)) {
+          parent.children.push(child)
+        }
+
+        // process all children
+        if (child.children) {
+          child.children.forEach(reParent)
+        }
+      }
+
+      // filter out nodes with no children
+      function clean (child) {
+        if (child.children) {
+          child.children = child.children
+            .map(clean)
+            .filter(child => !child.children || child.children.length > 0)
+        }
+        return child
+      }
+
+      // options
+      const options = this.$option('postsBy.category', {})
+
       // variables
       const categories = this.categories
-      const children = [
-        getItem(categories, 'slug', 'work'),
-        getItem(categories, 'slug', 'play'),
-        getItem(categories, 'slug', 'blog'),
-      ]
 
-      // reset root children
-      children.forEach(category => category.children = [])
-
-      // cache parents for attaching children
-      const parents = children.reduce((output, input) => {
+      // create parent lookup for attaching children
+      const parents = categories.reduce((output, input) => {
         output[input.id] = input
         return output
       }, {})
 
-      // re-parent categories
-      for (let category of categories) {
-        const parent = parents[category.parentId]
-        if (parent) {
-          parents[category.id] = category
-          parent.children.push(category)
-        }
-      }
+      // determine children
+      const children = options.categories
+        ? options.categories
+          .map(slug => getItem(categories, 'slug', slug))
+          .filter(category => category)
+        : categories
+          .filter(category => category.parentId === 0)
 
-      // return
-      return children
+      // reset root children
+      // children.forEach(category => category.children = [])
+
+      // re-parent categories
+      categories.forEach(reParent)
+
+      // filter and return
+      return clean({ children }).children
     }
   }
 }

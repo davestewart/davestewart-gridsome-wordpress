@@ -33,15 +33,7 @@ export default {
   data () {
     return {
       isMenuVisible: false,
-      items: {
-        '/': 'Show',
-        '/tell': 'Tell',
-        '/category/work': 'Work',
-        '/category/play': 'Play',
-        '/posts-by-category': 'Everything',
-        '/category/blog': 'Blog',
-        '/contact': 'Contact',
-      }
+      items: this.$option('menu')
     }
   }
 }

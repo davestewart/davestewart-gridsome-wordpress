@@ -22,7 +22,8 @@ query PostsByDate {
         excerpt
         path
         year: date (format: "YYYY")
-        date: date (format: "ddd Do MMM YYYY")
+        date: date (format: "YYYY/MM/DD")
+        dateHuman: date (format: "ddd Do MMM YYYY")
         categories {
           slug
         }
@@ -35,6 +36,7 @@ query PostsByDate {
 <script>
 import PostRoot from '../components/hierarchy/PostRoot'
 import CatalogWidget from '../components/widgets/CatalogWidget'
+import { sortBy } from '../utils/collection'
 
 export default {
   components: {
@@ -51,13 +53,16 @@ export default {
 
   computed: {
     posts () {
-      return this.$page.posts.edges.map(edge => edge.node)
+      return this.$page.posts
+        .edges.map(edge => edge.node)
+        .sort(sortBy('year', false))
     },
 
     children () {
       // variables
-      let group
+      const options = this.$option('postsBy.date', {})
       const groups = []
+      let group
 
       // loop over all groups
       for (let post of this.posts) {
@@ -73,8 +78,11 @@ export default {
         }
 
         // add to group
-        if (post.categories.some(category => /work|play/.test(category.slug))) {
-          group.children.push(post)
+        const include = options.filter
+          ? post.categories.some(category => options.filter.includes(category.slug))
+          : true
+        if (include) {
+         group.children.push(post)
         }
       }
 
