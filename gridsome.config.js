@@ -1,4 +1,5 @@
 const path = require('path')
+const config = require('./site.config')
 
 function addStyleResource (rule) {
   rule.use('style-resource')
@@ -18,23 +19,7 @@ module.exports = {
     {
       // use: '@gridsome/source-wordpress',
       use: '~/src/plugins/wp-source/',
-      options: {
-        baseUrl: 'http://davestewart.co.uk', // required - Replace me with your Wordpress URL
-        typeName: 'WordPress', // GraphQL schema name (Optional)
-        perPage: 100, // How many posts to load from server per request (Optional)
-        concurrent: 10, // How many requests to run simultaneously (Optional)
-        routes: {
-          post: '/post/:slug', //adds route for "post" post type (Optional)
-          post_tag: '/tag/:slug' // adds route for "post_tag" post type (Optional)
-        },
-        createPages: {
-          approach: 'include', // include or exclude, default is include
-          list: [
-            'show',
-            'tell',
-          ]
-        }
-      }
+      options: config.wordpress
     }
   ],
 
