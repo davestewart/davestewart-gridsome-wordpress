@@ -22,7 +22,7 @@ const menu = {
   '/tell': 'Tell',
   '/category/work': 'Work',
   '/category/play': 'Play',
-  '/posts-by-category': 'Everything',
+  '/posts-by-category': 'Browse',
   '/category/blog': 'Blog',
   '/contact': 'Contact'
 }

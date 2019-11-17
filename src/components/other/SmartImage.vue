@@ -24,7 +24,7 @@ export default {
 </script>
 
 <style lang="scss">
-figure {
+figure.smart-image {
   background: #CCC;
   position: relative;
   margin: 0;

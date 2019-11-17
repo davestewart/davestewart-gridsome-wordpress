@@ -12,7 +12,7 @@ export default {
 
   data () {
     return {
-      widget: widget('Browse Jobs', [
+      widget: widget('Browse', [
         item('By Category', '/posts-by-category'),
         item('By Date', '/posts-by-date'),
         item('By Tag', '/posts-by-tag'),
