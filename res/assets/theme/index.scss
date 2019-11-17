@@ -8,12 +8,13 @@
 	Version: 1.1.1
 
 -----------------------------------------------------------------------------------*/
+@import "variables";
 
 @import "formatting/reset";
-@import "formatting/setup";
 @import "formatting/general";
 @import "formatting/forms";
 @import "formatting/entry";
+@import "formatting/transitions";
 
 @import "layout/layout";
 

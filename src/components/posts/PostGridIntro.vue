@@ -25,7 +25,7 @@ export default {
 
   .entry-quote {
     padding-right: 20px;
-    background: #2C2F32;
+    background: $color-grey-darkest;
     margin: 20px;
     &:after {
       content: "";
@@ -38,7 +38,7 @@ export default {
   }
 
   * {
-    color: #CCC;
+    color: #DDD;
     font-size: 16px;
     line-height: 1.2em;
   }
@@ -53,7 +53,7 @@ export default {
   .text {
     p {
       &:first-child {
-        color: #FFF;
+        color: $white;
         font-size: 21px;
         line-height: 1.0em;
       }
@@ -63,10 +63,10 @@ export default {
   a {
     text-decoration: none;
     margin-right: 2px;
-    color: #EA4848;
+    color: $color-primary;
     transition: none;
     &:hover {
-      color: #FFF;
+      color: $white;
     }
   }
 }

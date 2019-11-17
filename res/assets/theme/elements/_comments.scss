@@ -1,0 +1,231 @@
+#comments {
+  clear: both;
+  margin: 0 10px 1.25em;
+  width: 620px;
+}
+
+.comments-title,
+#reply-title,
+.pings-title {
+  color: $color-grey-darkest;
+  font-family: 'Patua One', Georgia, serif;
+  margin: 0 3.2258%; /* 20px / 620px */
+  text-transform: uppercase;
+}
+
+.commentlist,
+.pinglist {
+  background: $white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  margin: 1.625em 0 2.5em 0; /* 26px / 40px */
+  list-style-type: none;
+  padding: 1.625em 0;
+  overflow: hidden;
+}
+
+.pinglist {
+  margin: 20px 0 40px;
+  list-style-type: decimal;
+  list-style-position: inside;
+  li {
+    margin: 0 20px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.comment {
+  margin: 1.25em 20px 0; /* 20px */
+  overflow: hidden;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.children {
+  list-style-type: none;
+  margin: 1.5em 0 0 14%;
+  .children {
+    margin-left: 80px;
+    .children {
+      margin-left: 0;
+    }
+  }
+
+  .comment {
+    margin: 1.5em 0 0 0;
+  }
+
+  .comment-body {
+    margin-left: 16.5%;
+    width: 76%;
+  }
+
+  .children .comment-body {
+    margin-left: 19%;
+    width: 72%;
+  }
+}
+
+.comment-body {
+  background: $color-grey-lightest;
+  margin: 0 0 0 14%; /* 80px/620px */
+  padding: 1.25em 20px 0.1em; /* 20px */
+  position: relative;
+  width: 79.310344827%; /* 460px / 580px */
+
+  ul {
+    list-style-type: disc;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
+}
+
+.comment-body::before {
+  border-top: 15px solid $color-border-light;
+  border-left: 15px solid transparent;
+  content: '';
+  height: 0;
+  left: -15px;
+  position: absolute;
+  top: 0;
+  width: 0;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// AUTHOR
+// ---------------------------------------------------------------------------------------------------------------------
+
+.avatar {
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.comment .avatar {
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+.avatar-overlay {
+  background: transparent url(/assets/theme/sprite.png) 0 -100px no-repeat;
+  display: block;
+  height: 56px;
+  margin-top: -56px;
+  position: relative;
+  top: 56px;
+  width: 56px;
+}
+
+.bypostauthor > div > .comment-body {
+  background: $color-secondary;
+  color: $color-grey-lighter;
+}
+
+.bypostauthor > div > .comment-body::before {
+  border-top: 15px solid $color-secondary;
+}
+
+.comment-meta {
+  color: $color-grey;
+  font-size: 12px;
+  margin-bottom: 1.25em;
+}
+
+.comment-meta a {
+  border-bottom: none;
+  color: $color-grey;
+}
+
+.comment-meta a:hover {
+  color: $color-primary;
+}
+
+.bypostauthor .comment-meta a {
+  color: $color-grey;
+}
+
+.bypostauthor .comment-meta a:hover {
+  color: $color-primary;
+}
+
+.comment-author cite {
+  color: $color-grey-darkest;
+  font-family: 'Patua One', Georgia, serif;
+  font-size: 18px;
+  font-style: normal;
+}
+
+.comment-author cite a {
+  border-bottom: none;
+  color: $color-grey-darkest;
+}
+
+.bypostauthor > div > .comment-body .comment-author cite,
+.bypostauthor > div > .comment-body .comment-author cite a {
+  color: $white;
+}
+
+.comment-author cite a:hover {
+  color: $color-primary;
+}
+
+.bypostauthor .comment-author cite a:hover {
+  color: $color-primary;
+}
+
+.nocomments {
+  text-align: center;
+  padding: 20px;
+}
+
+#commentform {
+  padding: 1.875em 20px; /* 30px/20px 620px */
+  background: $white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  margin-top: 1.875em;
+  overflow: hidden;
+
+  label {
+    position: relative;
+    top: 5px;
+  }
+
+  .required {
+    color: $color-primary;
+    position: relative;
+    top: 5px;
+  }
+
+  input {
+    float: left;
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 96.2068966%;
+    max-width: 96.2068966%;
+  }
+
+  .form-submit {
+    margin-bottom: 0;
+  }
+}
+
+.commentlist {
+  #respond {
+    margin-top: 1.25em;
+  }
+
+  #commentform {
+    box-shadow: none;
+    margin-top: 0;
+    padding-top: 0.625em;
+  }
+}
+

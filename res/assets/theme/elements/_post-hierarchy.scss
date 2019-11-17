@@ -19,11 +19,11 @@
   }
 
   strong {
-    color: #EA4848;
+    color: $color-primary;
   }
 
   .heading a {
-    color: #555;
+    color: $color-grey-darker;
   }
 
   .post {
@@ -73,21 +73,21 @@
     font-size: 8px;
     font-family: 'Open Sans', Arial, sans-serif;
     line-height: 10px;
-    color: #fff;
-    background: #000;
+    color: $white;
+    background: $black;
 
     border-radius: 3px;
-  }
 
-  .comments:after {
-    content: "...";
-    position: absolute;
-    display: block;
-    width: 0;
-    bottom: -5px;
-    left: 30%;
-    border-width: 5px 5px 0px 0;
-    border-style: solid;
-    border-color: #000 transparent;
+    &:after {
+      content: "...";
+      position: absolute;
+      display: block;
+      width: 0;
+      bottom: -5px;
+      left: 30%;
+      border-width: 5px 5px 0px 0;
+      border-style: solid;
+      border-color: $black transparent;
+    }
   }
 }

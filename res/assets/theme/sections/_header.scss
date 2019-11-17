@@ -1,6 +1,6 @@
 #logo {
   margin-bottom: 0;
-  padding: 45px 0 35px;
+  padding: 45px 0 25px;
   font-family: 'Merriweather', Georgia, serif;
   font-weight: 300;
   text-align: center;
@@ -8,17 +8,17 @@
   a {
     line-height: 1.2em;
     font-size: 50px;
-    color: #2c2f32;
+    color: $color-grey-darkest;
 
     &:hover {
-      color: #ea4848;
+      color: $color-primary;
       text-decoration: none;
     }
   }
 
   a:first-child:after {
     content: " ";
-    border-right: 2px solid #2c2f32;
+    border-right: 2px solid $color-grey-darkest;
     padding-left: 10px;
     margin-right: 10px;
     width: 1px;
@@ -31,7 +31,7 @@
     margin: 1em 0 0 0;
     line-height: 1.385em;
     font-weight: normal;
-    color: #EA4848;
+    color: $color-primary;
     font-size: 12px;
     font-family: 'Patua One';
     letter-spacing: 0.1em;

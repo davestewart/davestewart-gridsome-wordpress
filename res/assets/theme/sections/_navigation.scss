@@ -1,6 +1,6 @@
 .main-navigation {
-  background: #fff;
-  border-bottom: 4px solid #fafafb;
+  background: $white;
+  border-bottom: 4px solid #fbfbfb;
   box-shadow: 0 1px 0 #d2d2d3, 0 1px 3px rgba(0, 0, 0, .2);
 }
 
@@ -20,9 +20,9 @@
     float: left;
     position: relative;
     z-index: 40;
-    border-right: 1px solid #ebebec;
+    border-right: 1px solid $color-border-light;
     &:first-child {
-      border-left: 1px solid #ebebec;
+      border-left: 1px solid $color-border-light;
     }
   }
 
@@ -36,7 +36,8 @@
   position: absolute;
   top: -48px;
   left: 6px;
-  background: transparent url(/assets/theme/menu-icon.gif) 0 0 no-repeat;
+  background: $color-grey-darkest url(/assets/theme/menu-icon.png) no-repeat 0 0;
+  background-size: 100% 100%;
   border-bottom: none;
   cursor: pointer;
   margin-top: 20px;
@@ -47,7 +48,7 @@
 #mobile-menu {
   position: absolute;
   width: 100%;
-  background: #202222;
+  background: $color-grey-darkest;
   padding: 10px 0;
   z-index: 1000;
 
@@ -59,7 +60,7 @@
 
   a {
     border: none;
-    color: #fff;
+    color: $white;
     height: 2.5em;
     line-height: 2.5em;
   }
@@ -80,35 +81,19 @@ ul.menu {
     border-bottom: none;
     border-top: 3px solid transparent;
     padding: 0 15px;
-    color: #2c2f32;
+    color: $color-grey-darkest;
   }
 
   a {
     text-decoration: none;
     &:hover,
     &.active--exact {
-      color: #ea4848 !important;
+      color: $color-primary !important;
     }
   }
 }
 
 a.active--exact {
-  color: #ea4848 !important;
+  color: $color-primary !important;
 }
 
-/* Back to top link ------------------------------------*/
-#back-to-top {
-  border-radius: 4px;
-  background: #000000 url('/assets/theme/sprite.png') 12px -394px no-repeat;
-  display: none;
-  opacity: .7;
-  height: 46px;
-  width: 46px;
-  z-index: 999;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  &:hover {
-    opacity: 1;
-  }
-}

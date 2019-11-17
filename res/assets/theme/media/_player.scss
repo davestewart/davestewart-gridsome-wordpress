@@ -1,11 +1,12 @@
 .jp-jplayer {
   background-color: #292a2b;
+  // background-color: $color-grey-darkest;
   width: 560px;
 }
 
 .jp-video-container,
 .jp-audio-container {
-  border: 1px solid #000;
+  border: 1px solid $black;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
   position: relative;
   width: 99.230769%;

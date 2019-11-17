@@ -4,7 +4,7 @@ iframe {
 }
 
 .post-thumb {
-  background: #ea4848 url(/assets/theme/plus.png) 50% 50% no-repeat;
+  background: $color-primary url(/assets/theme/plus.png) 50% 50% no-repeat;
   margin: 1.429em 20px;
 }
 
@@ -86,7 +86,7 @@ img.alignnone {
 
 .gallery-caption,
 .image-caption {
-  color: #A7A7A7;
+  color: $color-grey-lighter;
   display: block;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 12px;

@@ -1,45 +1,46 @@
 #footer {
   background: transparent url(/assets/theme/bg-footer.jpg) repeat;
   border-top: 4px solid #0a0c0e;
-  color: #A7A7A7;
+  color: $color-grey-lighter;
   box-shadow: 0 -4px 0 rgba(0, 0, 0, .1);
-}
 
-#footer .widget-title {
-  color: #fff;
-}
-
-#footer a {
-  color: #ebebec;
-  transition: color .1s linear;
-  &:hover {
-    text-decoration: none;
-    color: #ea4848;
+  a {
+    color: $color-grey-lightest;
+    transition: color .1s linear;
+    &:hover {
+      text-decoration: none;
+      color: $color-primary;
+    }
   }
+
+  .widget {
+    > ul a {
+      background: $color-secondary;
+      color: $color-grey-lighter;
+    }
+
+    > ul li {
+      background: $color-secondary;
+    }
+
+    > ul a:hover {
+      color: $color-primary;
+    }
+  }
+
+  .widget-title {
+    color: $white;
+  }
+
 }
 
 .footer-col {
   float: left;
   margin-right: 20px;
   width: 300px;
-}
 
-.footer-col:last-child {
-  margin-right: 0;
-}
-
-#footer .widget {
-  > ul a {
-    background: #22272d;
-    color: #A7A7A7;
-  }
-
-  > ul li {
-    background: #22272d;
-  }
-
-  > ul a:hover {
-    color: #ea4848;
+  &:last-child {
+    margin-right: 0;
   }
 }
 

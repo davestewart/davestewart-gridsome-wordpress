@@ -51,7 +51,7 @@ html[xmlns] .slides {
 }
 
 .zilla-direction-nav {
-  border-bottom: 1px solid #ebebec;
+  border-bottom: 1px solid $color-border-light;
   display: block;
   font-size: 12px;
   margin: 0;
@@ -66,12 +66,12 @@ html[xmlns] .slides {
 }
 
 .zilla-direction-nav a {
-  color: #A7A7A7;
+  color: $color-grey-lighter;
 }
 
 .zilla-direction-nav a:hover {
   text-decoration: none;
-  color: #ea4848;
+  color: $color-primary;
 }
 
 .zilla-direction-nav .zilla-prev {

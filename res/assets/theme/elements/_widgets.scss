@@ -1,0 +1,68 @@
+.widget {
+  border-bottom: 1px solid $color-border-light;
+  margin: 1.875em 0 0 0;
+  padding: 0 20px 1.875em;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+    border: none;
+  }
+
+  #footer & {
+    border-bottom: none;
+  }
+
+  > ul {
+    list-style-type: none;
+    margin: 0;
+  }
+
+  > ul > li {
+    display: block;
+    padding: 0;
+    border: none;
+    margin-bottom: 0.35em;
+    background: $color-grey-lightest;
+    border-radius: 2px;
+  }
+
+  > ul a {
+    display: block;
+    padding: 0.35em 0.84em;
+    color: $color-grey-darker;
+    line-height: 1.5em;
+    transition: color .1s linear;
+
+    &:hover {
+      text-decoration: none;
+      color: $color-primary;
+    }
+  }
+
+  li {
+    .text {
+      background: none !important;
+    }
+
+    .meta {
+      float: right;
+      font-size: 0.7em;
+      border-radius: 3px;
+      padding: 0px 6px;
+    }
+  }
+
+}
+
+.widget-title {
+  color: $color-grey-darkest;
+  font-family: 'Patua One', Georgia, serif;
+  margin-bottom: 1.5em;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+

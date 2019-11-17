@@ -1,0 +1,319 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// LAYOUT
+// ---------------------------------------------------------------------------------------------------------------------
+
+html {
+  overflow-y: scroll;
+  &.smooth {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  position: relative;
+  border-top: 4px solid $color-grey-darkest;
+  color: $color-grey-darker;
+  background: transparent url(/assets/theme/bg-body.gif) repeat fixed;
+  font-family: 'Open Sans', Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 0.8em;
+  word-wrap: break-word;
+  line-height: 1.4em;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// MARGINS
+// ---------------------------------------------------------------------------------------------------------------------
+
+p,
+pre,
+ul,
+ol,
+dl,
+dd,
+blockquote,
+address,
+table,
+fieldset,
+form,
+.gallery-row,
+.post-thumb,
+.author-bio,
+#logo {
+  margin-bottom: 1.429em; /* 20px */
+}
+
+.card,
+.navigation-links,
+.pinglist {
+  margin-bottom: 2.857em; /* 40px */
+}
+
+.widget
+.children,
+.entry-content ol ol,
+.entry-content ol ul,
+.entry-content ul ul,
+.comment-body ol ol,
+.comment-body ol ul,
+.comment-body ul ul,
+.widget ul ul {
+  margin-bottom: 0;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// HEADINGS
+// ---------------------------------------------------------------------------------------------------------------------
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  font-weight: normal;
+  color: $color-grey-darker;
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 1.1667em;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 1.4em;
+  margin: 0 0 1em 0;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 1.429em;
+  margin: 0 0 0.5em 0;
+}
+
+h4 {
+  line-height: 1.2857em;
+  font-size: 16px;
+  margin-bottom: 0.5em;
+}
+
+h5 {
+  font-size: 12px;
+  line-height: 1.5em;
+}
+
+h6 {
+  font-size: 10px;
+  line-height: 1.6em;
+}
+
+h1.page-title:after {
+  content: '...';
+  /*
+  font-size: 0.8em;
+  */
+}
+
+h1 + .entry-content,
+h2 + .entry-content {
+  margin-top: -0.4em;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// GENERAL
+// ---------------------------------------------------------------------------------------------------------------------
+
+address {
+  font-style: italic;
+}
+
+abbr[title],
+acronym[title],
+dfn[title] {
+  cursor: help;
+  border-bottom: 1px dotted #666;
+}
+
+blockquote {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: $color-grey;
+  font-style: italic;
+  border-left: 1px solid #ddd;
+  margin: 2em;
+  padding-left: 10px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em,
+dfn,
+cite {
+  font-style: italic;
+}
+
+dfn {
+  font-weight: bold;
+}
+
+sup {
+  font-size: 11px;
+  vertical-align: top;
+}
+
+sub {
+  font-size: 11px;
+  vertical-align: bottom;
+}
+
+small {
+  font-size: 11px;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+ins {
+  text-decoration: underline;
+}
+
+code,
+pre {
+  line-height: 18px;
+}
+
+var,
+kbd,
+samp,
+code,
+pre {
+  font: 12px/18px Consolas, "Andale Mono", Courier, "Courier New", monospace;
+}
+
+kbd {
+  font-weight: bold;
+}
+
+samp,
+var {
+  font-style: italic;
+}
+
+pre {
+  white-space: pre;
+  overflow: auto;
+  padding: 10px;
+  border: 1px solid #ddd;
+  clear: both;
+  margin: 2.5em 2em;
+}
+
+pre {
+  border-radius: 3px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  tab-size: 4;
+  overflow-x: auto;
+  word-wrap: normal;
+}
+
+code {
+  padding: 3px;
+}
+
+ul,
+ol,
+dl {
+  margin-left: 30px;
+}
+
+table {
+  border: 1px solid #ccc;
+  line-height: 18px;
+  margin: 0 0 22px 0;
+  text-align: left;
+  padding: 0 5px;
+}
+
+table .even {
+  background: #ddd;
+}
+
+caption {
+  text-align: left;
+}
+
+tr {
+  border-bottom: 1px solid #ccc;
+}
+
+th,
+td {
+  padding: 5px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// LINKS
+// ---------------------------------------------------------------------------------------------------------------------
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  transition: color .1s linear;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+a img {
+  border: none;
+}
+
+a > img {
+  vertical-align: bottom;
+}
+
+h3 a:link,
+h3 a:visited {
+  color: $black;
+}
+
+a {
+  transition: none;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// UTILS
+// ---------------------------------------------------------------------------------------------------------------------
+
+.hidden {
+  display: none;
+}
+
+.alignleft {
+  float: left;
+}
+
+.alignright {
+  float: right;
+}
+
+.aligncenter {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  clear: both;
+}
+
+.clear {
+  clear: both;
+  display: block;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  width: 100%;
+}

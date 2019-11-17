@@ -3,7 +3,7 @@ import objectPath from 'object-path'
 import config from '../site.config'
 
 // styling
-import '../res/theme/index.scss'
+import '../res/assets/theme/index.scss'
 import { stylesheet } from './utils/head'
 
 // tools
