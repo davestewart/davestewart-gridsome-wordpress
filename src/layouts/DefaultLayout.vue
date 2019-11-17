@@ -20,6 +20,10 @@
     </div>
 
     <site-footer/>
+
+    <ClientOnly>
+      <BackToTop/>
+    </ClientOnly>
   </div>
 </template>
 
@@ -27,13 +31,15 @@
 import SiteNav from '~/components/site/SiteNav.vue'
 import SiteHeader from '~/components/site/SiteHeader.vue'
 import SiteFooter from '~/components/site/SiteFooter.vue'
+import BackToTop from '../components/other/BackToTop'
 
 export default {
   components: {
     SiteNav,
     SiteHeader,
     SiteFooter,
-    SiteSidebar: () => import('~/components/site/SiteSidebar.vue')
+    SiteSidebar: () => import('~/components/site/SiteSidebar.vue'),
+    BackToTop: () => import('~/components/other/BackToTop.vue'),
   },
 
   metaInfo () {
