@@ -7,7 +7,7 @@
     <div class="card">
       <h1 class="entry-title">Posts by Tag</h1>
       <div class="entry-content">
-        <PostRoot :children="children"/>
+        <PostRoot class="posts-by-tag" :children="children"/>
       </div>
     </div>
   </Layout>
@@ -65,43 +65,31 @@ export default {
 
     children () {
       return this.tags.map(tag => {
-        const titles = tag.belongsTo.edges.map(edge => edge.node.title)
+        const links = tag.belongsTo.edges
+          .map(edge => {
+            const { title, path} = edge.node
+            return `<a href="${path}">${title}</a>`
+          })
+        const html = links.length > 1
+          ? `${links.slice(0, -1).join(', ')} and ${links.slice(-1)}`
+          : links
         return {
           ...tag,
-          excerpt: `<strong>${plural(tag.count, 'post')}</strong>: ${titles.join(', ')}`
+          excerpt: `<strong>${plural(tag.count, 'post')}</strong>: ${html}`
         }
       })
-      // variables
-      let group
-      const groups = []
-
-      // loop over all groups
-      for (let tag of this.tags) {
-        // new group
-        if (!group || tag.year !== group.title) {
-          if (group && group.children.length) {
-            groups.push(group)
-          }
-          group = {
-            title: tag.year,
-            children: []
-          }
-        }
-
-        // add to group
-        if (tag.categories.some(category => /work|play/.test(category.slug))) {
-          group.children.push(tag)
-        }
-      }
-
-      // add final group
-      if (group.children.length) {
-        groups.push(group)
-      }
-
-      // return
-      return groups
     }
   }
 }
 </script>
+
+<style lang="scss">
+.posts-by-tag {
+  a {
+    color: $color-grey;
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+</style>

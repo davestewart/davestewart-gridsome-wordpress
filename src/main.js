@@ -11,7 +11,7 @@ import filters from './utils/filters'
 
 // components
 import DefaultLayout from './layouts/DefaultLayout.vue'
-import RelatedItems from './components/taxonomy/RelatedItems'
+import RelatedItems from './components/widgets/RelatedItems'
 
 export default function (Vue, { head }) {
   // components
