@@ -17,8 +17,8 @@ module.exports = {
   icon: './static/favicon.png',
   plugins: [
     {
-      // use: '@gridsome/source-wordpress',
-      use: '~/src/plugins/wp-source/',
+      use: '@gridsome/source-wordpress',
+      // use: '~/src/plugins/wp-source/',
       options: config.wordpress
     }
   ],
