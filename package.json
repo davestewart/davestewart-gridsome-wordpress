@@ -15,7 +15,7 @@
     "debounce": "^1.2.0",
     "gridsome": "^0.6.7",
     "isotope-layout": "^3.0.6",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "object-path": "^0.11.4",
     "vue": "^2.6.10",
     "vue-sticky": "^3.3.4"
